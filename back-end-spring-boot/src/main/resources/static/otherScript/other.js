@@ -1,0 +1,3 @@
+function alertOther() {
+    alert("other")
+}

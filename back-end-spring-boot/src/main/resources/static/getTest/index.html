@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>child</title>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div>iframe子页面内容</div>
+</body>
+<script language="javascript" type="text/javascript">
+    $.ajax({
+        type:'GET',
+        url:'http://localhost:8080/get',
+        success:function(result){
+           alert(result);
+        }
+    });
+</script>
+</html>

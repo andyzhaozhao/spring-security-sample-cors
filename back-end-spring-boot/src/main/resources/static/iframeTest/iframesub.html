@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>child</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div>iframe子页面内容</div>
+</body>
+<script language="javascript" type="text/javascript">
+    //在iframe子页面中查找父页面元素
+    alert(window.parent.document.getElementById("#default"))
+    //在iframe中调用父页面中定义的变量
+    alert(parent.value);
+    //在iframe中调用父页面中定义的方法
+    parent.sayhello();
+</script>
+</html>

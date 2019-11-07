@@ -1,47 +1,20 @@
 server:
-  port: 8082
+  port: 8080
   servlet:
     session:
       cookie:
         name: UISESSIONCOUPON
 
 spring:
-  thymeleaf:
-    cache: false
-  security:
-    oauth2:
-      client:
-        registration:
-          github:
-            client-id: b7fb29a538bb19b09365
-            client-secret: 2fbfd22e69e61d873bad55143538770748a76d3a
-          tdf:
-            client-id: tdfOauth2SSO213
-            client-secret: 123456
-            provider: tdf
-            client-name: 太极统一认证
-            authorization-grant-type: authorization_code
-            redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
-#            client-authentication-method: basic
-        provider:
-          tdf:
-            authorization-uri: http://192.168.99.77:9998/oauth/authorize
-            token-uri: http://192.168.99.77:9998/oauth/token
-            user-info-uri: http://192.168.99.77:9998/me
-            user-name-attribute: "name"
-            jwk-set-uri: http://192.168.99.77:9998/.well-known/jwks.json
-#          tdf:
-#            authorization-uri: http://localhost:9999/oauth/authorize
-#            token-uri: http://localhost:9999/oauth/token
-#            user-info-uri: http://localhost:9999/me
-#            user-name-attribute: "name"
-#            jwk-set-uri: http://localhost:9999/.well-known/jwks.json
-
+  profiles:
+    # withoutCORS , defaultCORS ,simpleCORS
+    active: simpleCORS
 
 logging:
   level:
     root: INFO
-    org.springframework.web: INFO
+    org.springframework.web: DEBUG
     org.springframework.security: DEBUG
     org.springframework.security.oauth2: DEBUG
     import org.springframework.cloud.netflix.zuul: DEBUG
+

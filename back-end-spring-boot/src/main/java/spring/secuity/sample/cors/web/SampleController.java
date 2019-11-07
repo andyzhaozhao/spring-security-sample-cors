@@ -24,6 +24,7 @@ public class SampleController {
     }
 
     @PutMapping("/sample")
+    @CrossOrigin(allowedHeaders = "*")
     public String put(HttpServletRequest request) {
         return "put";
     }

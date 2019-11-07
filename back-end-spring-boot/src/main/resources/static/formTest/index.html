@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>child</title>
+    <meta charset="UTF-8">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<div>iframe子页面内容</div>
+<form action="" method="get" class="form-example">
+    <div class="form-example">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required>
+    </div>
+    <div class="form-example">
+        <label for="email">Enter your email: </label>
+        <input type="email" name="email" id="email" required>
+    </div>
+    <div class="form-example">
+        <input type="submit" value="Subscribe!">
+    </div>
+</form>
+</body>
+<script language="javascript" type="text/javascript">
+    $.ajax({
+        type:'GET',
+        url:'http://localhost:8080/get',
+        success:function(result){
+           alert(result);
+        }
+    });
+</script>
+</html>
