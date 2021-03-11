@@ -10,4 +10,11 @@
     <modules>
         <module>back-end-spring-boot</module>
     </modules>
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun外网maven库临时解决国外网络环境不好的问题</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+        </repository>
+    </repositories>
 </project>
